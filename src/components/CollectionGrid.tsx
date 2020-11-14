@@ -3,9 +3,9 @@ import {StyleSheet, View, Text, Image, FlatList} from 'react-native';
 import {ProductsList} from "../../types";
 import {height, width} from "../constants/Layout";
 
-const newCollectionBanner = require('../../assets/images/product6.png')
-const menHatsBanner = require('../../assets/images/product9.png')
-const blackBanner = require('../../assets/images/product10.png')
+const newCollectionBanner = require('../../assets/images/banners/new_collection_banner.png')
+const menHatsBanner = require('../../assets/images/banners/men_hats_collection_banner.png')
+const blackBanner = require('../../assets/images/banners/black_collection_banner.png')
 
 export default function CollectionGrid() {
     return (

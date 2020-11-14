@@ -30,3 +30,9 @@ export type ProductsList = {
   label: string,
   description: string,
 }
+
+export type CategoryList = {
+  id: string,
+  name: string,
+  image: string
+}

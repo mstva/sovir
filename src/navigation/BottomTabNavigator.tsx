@@ -18,7 +18,7 @@ const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 export default function BottomTabNavigator() {
   const colorScheme = useColorScheme();
   return (
-    <BottomTab.Navigator initialRouteName="Home" tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, }}>
+    <BottomTab.Navigator initialRouteName="Category" tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, }}>
       <BottomTab.Screen
           name="Home"
           component={HomeNavigator}

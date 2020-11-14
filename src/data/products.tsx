@@ -1,31 +1,31 @@
-const product1 = require('../../assets/images/product1.png')
-const product2 = require('../../assets/images/product2.png')
-const product3 = require('../../assets/images/product3.png')
-const product4 = require('../../assets/images/product4.png')
-const product5 = require('../../assets/images/product5.png')
+const Blouse = require('../../assets/images/products/blouse.png')
+const Shirt = require('../../assets/images/products/tshirt.png')
+const WhiteSportsDress = require('../../assets/images/products/white_sports_dress.png')
+const BlackSportsDress = require('../../assets/images/products/black_sports_dress.png')
+const EveningDress = require('../../assets/images/products/evening_dress.png')
 
 export default [
     {
         id: '1',
-        name: 'Evening Dress',
+        name: 'Blouse',
         brand: 'Dorothy Perkins',
-        image: product1,
+        image: Blouse,
         price: '12',
         rating: '10'
     },
     {
         id: '2',
-        name: 'Sports Dress',
+        name: 'Evening Dress',
         brand: 'Silly',
-        image: product5,
+        image: EveningDress,
         price: '19',
         rating: '55'
     },
     {
         id: '3',
-        name: 'Blouse',
+        name: 'White Sports Dress',
         brand: 'OVS',
-        image: product3,
+        image: WhiteSportsDress,
         price: '33',
         rating: '13'
     },
@@ -33,15 +33,15 @@ export default [
         id: '4',
         name: 'T-Shirt Sailing',
         brand: 'Mango Boy',
-        image: product2,
+        image: Shirt,
         price: '150',
         rating: '5'
     },
     {
         id: '5',
-        name: 'Jeans',
+        name: 'Black Sports Dress',
         brand: 'Cool',
-        image: product4,
+        image: BlackSportsDress,
         price: '25',
         rating: '40'
     },
