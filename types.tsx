@@ -31,7 +31,7 @@ export type ProductsList = {
   description: string,
 }
 
-export type WomenCategory = {
+export type CategoryList = {
   id: string,
   name: string,
   image: string
