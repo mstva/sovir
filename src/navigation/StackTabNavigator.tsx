@@ -1,11 +1,11 @@
 import {createStackNavigator} from "@react-navigation/stack";
 import * as React from "react";
 import {CartParamList, CategoryParamList, FavoriteParamList, HomeParamList, ProfileParamList} from "../../types";
-import CategoryScreen from "../screens/CategoryScreen";
-import CartScreen from "../screens/CartScreen";
-import FavoriteScreen from "../screens/FavoriteScreen";
-import ProfileScreen from "../screens/ProfileScreen";
-import HomeScreen from "../screens/HomeScreen";
+import CategoryScreen from "../screens/BottomTabScreens/CategoryScreen";
+import CartScreen from "../screens/BottomTabScreens/CartScreen";
+import FavoriteScreen from "../screens/BottomTabScreens/FavoriteScreen";
+import ProfileScreen from "../screens/BottomTabScreens/ProfileScreen";
+import HomeScreen from "../screens/BottomTabScreens/HomeScreen";
 
 const HomeStack = createStackNavigator<HomeParamList>();
 const CategoryStack = createStackNavigator<CategoryParamList>();
