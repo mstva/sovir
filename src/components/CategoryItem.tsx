@@ -1,17 +1,16 @@
 import * as React from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
-import {Product, WomenCategory} from "../../types";
-import {FontAwesome, MaterialCommunityIcons, MaterialIcons} from "@expo/vector-icons";
+import {CategoryList} from "../../types";
 import {width} from "../constants/Layout";
 
-export type CategoryItemProps = { womenCategory: WomenCategory }
+export type CategoryItemProps = { categoryList: CategoryList }
 
 export default function CategoryItem(props: CategoryItemProps) {
-    const { womenCategory } = props
+    const { categoryList } = props
     return (
         <View style={styles.container}>
-            <Text style={styles.categoryName}>{womenCategory.name}</Text>
-            <Image source={{ uri: womenCategory.image }} style={styles.categoryImage}/>
+            <Text style={styles.categoryName}>{categoryList.name}</Text>
+            <Image source={{ uri: categoryList.image }} style={styles.categoryImage}/>
         </View>
     );
 }

@@ -1,10 +1,13 @@
 import * as React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, FlatList} from 'react-native';
+import {men_categories, women_categories} from "../../data/categories";
+import Colors from "../../constants/Colors";
+import CategoryList from "../../components/CategoryList";
 
 export default function MenTabScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Men</Text>
+      <CategoryList data={men_categories}/>
     </View>
   );
 }
@@ -12,11 +15,6 @@ export default function MenTabScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: Colors.dark.background
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-});
+})
