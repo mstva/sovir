@@ -1,10 +1,13 @@
 import * as React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
+import CategoryList from "../../components/CategoryList";
+import {kids_categories} from "../../data/categories";
+import Colors from "../../constants/Colors";
 
 export default function KidsTabScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Kids</Text>
+      <CategoryList data={kids_categories}/>
     </View>
   );
 }
@@ -12,11 +15,6 @@ export default function KidsTabScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    backgroundColor: Colors.dark.background
   },
 });
