@@ -1,8 +1,6 @@
 import * as React from 'react';
-import {StyleSheet, View, Text, Image, FlatList, ScrollView} from 'react-native';
-import {width, height} from "../../constants/Layout";
-import products from "../../data/products";
-import ProductItem from "../../components/ProductItem";
+import {StyleSheet, View, Text, Image, ScrollView} from 'react-native';
+import {width} from "../../constants/Layout";
 import ProductList from "../../components/ProductList";
 import CollectionGrid from "../../components/CollectionGrid";
 import Colors from "../../constants/Colors";
