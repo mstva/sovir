@@ -7,6 +7,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import MenTabScreen from "../TopTabScreens/MenTabScreen";
 import WomenTabScreen from "../TopTabScreens/WomenTabScreen";
 import KidsTabScreen from "../TopTabScreens/KidsTabScreen";
+import Header from "../../components/Header";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -28,11 +29,7 @@ export default function CategoryScreen() {
   return (
     <ScrollView style={styles.container}>
         <SafeAreaView>
-            <View style={styles.headerContainer}>
-                <Ionicons name="ios-arrow-back" size={24} color="white" />
-                <Text style={styles.headerTitle}>Categories</Text>
-                <MaterialIcons name="search" size={24} color="white" />
-            </View>
+            <Header headerPage={{title: 'Categories'}}/>
             <CategoryTabs/>
         </SafeAreaView>
     </ScrollView>
@@ -45,13 +42,4 @@ const styles = StyleSheet.create({
     height: height,
     backgroundColor: Colors.dark.background
   },
-  headerContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginHorizontal: 10,
-    marginVertical: 10
-  },
-  headerTitle: {
-    color: Colors.dark.text
-  }
 });
