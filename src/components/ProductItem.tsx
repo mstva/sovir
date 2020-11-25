@@ -1,19 +1,35 @@
 import * as React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text, Image, TouchableWithoutFeedback} from 'react-native';
 import {Product} from "../../types";
 import {FontAwesome, MaterialCommunityIcons, MaterialIcons} from "@expo/vector-icons";
+import {useNavigation} from "@react-navigation/native";
 
 export type ProductItemProps = { product: Product }
 
 export default function ProductItem(props: ProductItemProps) {
     const { product } = props
+    const navigation = useNavigation()
+    const onPress = () => {navigation.navigate('DetailScreen', {
+        id: product.id,
+        name: product.name,
+        brand: product.brand,
+        description: product.description,
+        cover_image: product.cover_image,
+        product_images: product.product_images,
+        price: product.price,
+        rating: product.rating
+    })}
     return (
         <View style={styles.container}>
-            <View style={styles.imageContainer}>
-                <Image source={{ uri: product.image }} style={styles.productImage}/>
-            </View>
-            <Text style={styles.productBrand}>{product.brand}</Text>
-            <Text style={styles.productName}>{product.name}</Text>
+            <TouchableWithoutFeedback onPress={onPress}>
+                <View>
+                    <View style={styles.imageContainer}>
+                        <Image source={{uri: product.cover_image }} style={styles.productImage}/>
+                    </View>
+                    <Text style={styles.productBrand}>{product.brand}</Text>
+                    <Text style={styles.productName}>{product.name}</Text>
+                </View>
+            </TouchableWithoutFeedback>
             <View style={styles.footer}>
                 <Text style={styles.productPrice}>${product.price}</Text>
                 <View style={styles.iconContainer}>
@@ -30,16 +46,13 @@ const styles = StyleSheet.create({
 
     },
     imageContainer: {
-        margin: 5,
-        alignContent: "center",
-        justifyContent: "center",
-        alignItems: "center",
+        margin: 2,
     },
     productImage: {
         width: 150,
         height: 200,
-        borderRadius: 15,
-        alignSelf: "center",
+        resizeMode: "contain",
+        borderRadius: 20,
     },
     productBrand: {
         marginStart: 10,

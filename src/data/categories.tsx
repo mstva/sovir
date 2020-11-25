@@ -84,3 +84,36 @@ export const kids_categories = [
     },
 
 ]
+
+export const profile_categories = [
+    {
+        id: '1',
+        name: 'My orders',
+        info: 'Already have 12 orders'
+    },
+    {
+        id: '2',
+        name: 'Shipping addresses',
+        info: '3 addresses'
+    },
+    {
+        id: '3',
+        name: 'Payment methods',
+        info: 'Visa  **34'
+    },
+    {
+        id: '4',
+        name: 'Promo codes',
+        info: 'You have special promo codes'
+    },
+    {
+        id: '5',
+        name: 'My reviews',
+        info: 'Reviews for 4 items',
+    },
+    {
+        id: '6',
+        name: 'Settings',
+        info: 'Notifications, password'
+    },
+]

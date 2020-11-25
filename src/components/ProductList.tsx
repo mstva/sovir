@@ -1,13 +1,15 @@
 import * as React from 'react';
-import {StyleSheet, View, Text, Image, FlatList} from 'react-native';
+import {StyleSheet, View, Text, TouchableWithoutFeedback, FlatList} from 'react-native';
 import {ProductsList} from "../../types";
 import products from "../data/products";
 import ProductItem from "./ProductItem";
+import {useNavigation} from "@react-navigation/native";
 
 export type ProductListProps = { productsList: ProductsList }
 
 export default function ProductList(props: ProductListProps) {
-    const { productsList } = props
+    const {productsList} = props
+    const navigation = useNavigation()
     return (
         <View style={styles.container}>
             <View style={styles.sectionContainer}>
@@ -15,7 +17,9 @@ export default function ProductList(props: ProductListProps) {
                     <Text style={styles.label}>{productsList.label}</Text>
                     <Text style={styles.description}>{productsList.description}</Text>
                 </View>
-                <Text style={styles.action}>View all</Text>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate(productsList.label+'Screen')}>
+                    <Text style={styles.action}>View all</Text>
+                </TouchableWithoutFeedback>
             </View>
             <FlatList
                 data={products}
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#ffffff'
     },
-    action:  {
+    action: {
         justifyContent: "center",
         alignSelf: "center",
         color: '#ffffff'
