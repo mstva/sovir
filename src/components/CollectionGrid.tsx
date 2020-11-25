@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     },
     banner1: {
         width: width,
-        height: height / 2
+        height: height / 2,
     },
     banner2: {
         width: width/2,
