@@ -1,23 +1,23 @@
 import * as React from 'react';
 import {StyleSheet, View, Text, TouchableWithoutFeedback, FlatList} from 'react-native';
-import {HeaderPage} from "../../types";
+import {Title} from "../../types";
 import products from "../data/products";
-import ProductItem from "./ProductItem";
+import ProductItem from "../screens/HomeStack/Components/ProductItem";
 import {useNavigation} from "@react-navigation/native";
 import {Ionicons, MaterialIcons} from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 
-export type HeaderPageProps = { headerPage: HeaderPage }
+export type HeaderTitleProps = { headerTitle: Title }
 
-export default function Header(props: HeaderPageProps) {
-    const {headerPage} = props
+export default function Header(props: HeaderTitleProps) {
+    const {headerTitle} = props
     const navigation = useNavigation()
     return (
         <View style={styles.headerContainer}>
             <TouchableWithoutFeedback onPress={() => {navigation.goBack()}}>
                 <Ionicons name="ios-arrow-back" size={24} color="white" />
             </TouchableWithoutFeedback>
-            <Text style={styles.headerTitle}>{headerPage.title}</Text>
+            <Text style={styles.headerTitle}>{headerTitle.title}</Text>
             <MaterialIcons name="search" size={24} color="white" />
         </View>
     );
