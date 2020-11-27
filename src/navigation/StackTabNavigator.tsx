@@ -1,11 +1,11 @@
 import {createStackNavigator} from "@react-navigation/stack";
 import * as React from "react";
 import {CartParamList, CategoryParamList, FavoriteParamList, HomeParamList, ProfileParamList} from "../../types";
-import CategoryScreen from "../screens/BottomTabScreens/CategoryScreen";
-import CartScreen from "../screens/BottomTabScreens/CartScreen";
-import FavoriteScreen from "../screens/BottomTabScreens/FavoriteScreen";
-import ProfileScreen from "../screens/BottomTabScreens/ProfileScreen";
-import HomeScreen from "../screens/BottomTabScreens/HomeScreen";
+import CategoryScreen from "../screens/CategoryStack/MainScreen/CategoryScreen";
+import CartScreen from "../screens/CartStack/MainScreen/CartScreen";
+import FavoriteScreen from "../screens/FavoriteStack/MainScreen/FavoriteScreen";
+import ProfileScreen from "../screens/ProfileStack/MainScreen/ProfileScreen";
+import HomeScreen from "../screens/HomeStack/MainScreen/HomeScreen";
 
 const HomeStack = createStackNavigator<HomeParamList>();
 const CategoryStack = createStackNavigator<CategoryParamList>();
@@ -41,7 +41,7 @@ export function CartNavigator() {
             <CartStack.Screen
                 name="CartScreen"
                 component={CartScreen}
-                options={{ headerTitle: 'Cart Title' }}/>
+                options={{ headerShown: false }}/>
         </CartStack.Navigator>
     );
 }
